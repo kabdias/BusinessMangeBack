@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: unitTdd.BuyingHandleTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 1, Errors: 4, Skipped: 0, Time elapsed: 0.016 sec <<< FAILURE!
+saveOnePurchaseDetailsShouldBeSavedTest(unitTdd.BuyingHandleTest)  Time elapsed: 0.01 sec  <<< ERROR!
+com.tsconsulting.businessManage.application.domain.exception.ControlPurchaseDetailException: La tva n'est pas valide
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.checkTva(PurchaseProductDetail.java:69)
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.isParametersValid(PurchaseProductDetail.java:47)
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.<init>(PurchaseProductDetail.java:26)
+	at com.tsconsulting.businessManage.application.domain.usescase.BuyingHandle.savePurchaseDetails(BuyingHandle.java:49)
+	at unitTdd.BuyingHandleTest.saveOnePurchaseDetailsShouldBeSavedTest(BuyingHandleTest.java:92)
+
+saveOnePurchaseShouldBeSavedTest(unitTdd.BuyingHandleTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+	at java.base/java.util.Optional.of(Optional.java:113)
+	at com.tsconsulting.businessManage.infrastructure.adaptaters.out.data.memory.buying.SessionMemory.currentUser(SessionMemory.java:19)
+	at com.tsconsulting.businessManage.application.domain.usescase.BuyingHandle.savePurchase(BuyingHandle.java:37)
+	at unitTdd.BuyingHandleTest.saveOnePurchaseShouldBeSavedTest(BuyingHandleTest.java:48)
+
+savePurchaseWithAllProductsTest(unitTdd.BuyingHandleTest)  Time elapsed: 0 sec  <<< ERROR!
+com.tsconsulting.businessManage.application.domain.exception.ControlPurchaseDetailException: La tva n'est pas valide
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.checkTva(PurchaseProductDetail.java:69)
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.isParametersValid(PurchaseProductDetail.java:47)
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.<init>(PurchaseProductDetail.java:26)
+	at unitTdd.BuyingHandleTest.savePurchaseWithAllProductsTest(BuyingHandleTest.java:168)
+
+saveOnePurchaseDateIsNullOrLessTodayShouldThrowInvalidateDateException(unitTdd.BuyingHandleTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: unexpected exception type thrown; expected:<com.tsconsulting.businessManage.application.domain.exception.InvalideDatePurchaseException> but was:<java.lang.NullPointerException>
+	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
+	at java.base/java.util.Optional.of(Optional.java:113)
+	at com.tsconsulting.businessManage.infrastructure.adaptaters.out.data.memory.buying.SessionMemory.currentUser(SessionMemory.java:19)
+	at com.tsconsulting.businessManage.application.domain.usescase.BuyingHandle.savePurchase(BuyingHandle.java:37)
+	at unitTdd.BuyingHandleTest.lambda$saveOnePurchaseDateIsNullOrLessTodayShouldThrowInvalidateDateException$0(BuyingHandleTest.java:63)
+
+savePurchaseDetailsListTest(unitTdd.BuyingHandleTest)  Time elapsed: 0 sec  <<< ERROR!
+com.tsconsulting.businessManage.application.domain.exception.ControlPurchaseDetailException: La tva n'est pas valide
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.checkTva(PurchaseProductDetail.java:69)
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.isParametersValid(PurchaseProductDetail.java:47)
+	at com.tsconsulting.businessManage.application.domain.model.PurchaseProductDetail.<init>(PurchaseProductDetail.java:26)
+	at unitTdd.BuyingHandleTest.savePurchaseDetailsListTest(BuyingHandleTest.java:136)
+

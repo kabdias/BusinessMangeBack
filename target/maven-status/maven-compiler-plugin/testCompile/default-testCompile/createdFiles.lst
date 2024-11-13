@@ -1,0 +1,8 @@
+acceptance\configuration\ContextTestingConfiguration.class
+acceptance\steps\BuyingStep.class
+acceptance\steps\UserSteps.class
+acceptance\steps\PersonelStep.class
+acceptance\AllTestAcceptanceTest.class
+acceptance\steps\ProductsStep.class
+unitTdd\BuyingHandleTest.class
+acceptance\configuration\RepositoriesConfiguration.class

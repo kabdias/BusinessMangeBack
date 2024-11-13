@@ -1,0 +1,10 @@
+Comment utiliser  BDD avec gherkins et cucumber
+
+1) Définir le fichier Ghenkins dans /test/ressource
+2) créer les steps pour chaque spécification dans Jerkins (java)
+3) il faut rajouter l'implémentation de l'interface En de cucumber dans tout les classe steps qui se trouve dans le dossier /test/java/acceptance/steps du projet
+4) créer le point d'entrée qui test tout la classe AllAcceptanceTest dans /test/java/acceptance
+5) ajouter dans AllAcceptanceTest
+                       -- l'annotation @RunWith(Cucumber.class) pour dire à cucumber d'executer les tests
+                       -- l'annotation @CucumberOptions(plugin = {"pretty", "html:FeaturesReport/report.html"}, features = {"src/test/resources"}) pour spécifier l'emplaceent 
+                               du fichier jerkins et où seront stockés les résultats
